@@ -1,0 +1,3 @@
+[submodule "embedded-runtimes"]
+	path = embedded-runtimes
+	url = https://github.com/ekoeppen/embedded-runtimes.git
