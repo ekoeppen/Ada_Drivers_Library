@@ -43,9 +43,9 @@ project Common is
       for Gnat use "arm-eabi-gnat";
       for Gnatlist use "arm-eabi-gnatls";
       for Debugger_Command use "arm-eabi-gdb";
-      for Program_Host use "localhost:4242";
-      for Communication_Protocol use "remote";
-      for Connection_Tool use "st-util";
+      for Program_Host use ":2331";
+      for Communication_Protocol use "ext";
+      for Connection_Tool use "j-link";
    end Ide;
 
 end Common;
