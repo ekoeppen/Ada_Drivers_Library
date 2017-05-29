@@ -1,0 +1,13 @@
+with "../../boards/stm32f411_discovery.gpr";
+
+project Blinky_F411Disco extends "../shared/common/common.gpr" is
+
+  for Runtime ("Ada") use STM32F411_Discovery'Runtime("Ada");
+  for Target use "arm-eabi";
+  for Main use ("blinky.adb");
+  for Languages use ("Ada");
+  for Source_Dirs use ("../shared/hello_world_blinky/src");
+  for Object_Dir use "../shared/hello_world_blinky/obj/stm32f411disco";
+
+end Blinky_F411Disco;
+

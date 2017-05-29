@@ -1,3 +1,6 @@
 [submodule "embedded-runtimes"]
 	path = embedded-runtimes
 	url = https://github.com/ekoeppen/embedded-runtimes.git
+[submodule "examples/MicroBit/zfp-nrf51"]
+	path = examples/MicroBit/zfp-nrf51
+	url = https://github.com/nocko/zfp-nrf51
