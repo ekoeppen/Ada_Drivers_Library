@@ -16,6 +16,8 @@ BOARDS = {
     'STM32F746_Discovery': { 'rts_profiles': ['ravenscar-sfp', 'ravenscar-full']},
     'STM32F769_Discovery': { 'rts_profiles': ['ravenscar-sfp', 'ravenscar-full']},
     'NUCLEO_F446ZE':       { 'rts_profiles': ['ravenscar-sfp', 'ravenscar-full']},
+    'Nucleo_F303RE':       { 'rts_profiles': ['ravenscar-sfp', 'ravenscar-full']},
+    'EFM32TG_Stackable':   { 'rts_profiles': ['ravenscar-sfp', 'ravenscar-full']},
     }
 
 
@@ -25,6 +27,8 @@ FOLDERS = {'Crazyflie': 'crazyflie',
            'MicroBit': 'MicroBit',
            'Native': 'native',
            'OpenMV2': 'OpenMV2',
+           'Nucleo_F303RE': 'nucleo_f303re',
+           'EFM32TG_Stackable': 'efm32tg_stackable',
            'STM32F407_Discovery': 'stm32f407_discovery',
            'STM32F429_Discovery': 'stm32f429_discovery',
            'STM32F469_Discovery': 'stm32f469_discovery',

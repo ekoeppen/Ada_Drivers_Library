@@ -1,0 +1,36 @@
+--  **AUTOMATICALLY GENERATED** Do not edit !!
+--  Please see board_projects_generator.py
+--  and edit this script instead.
+
+with "../config";
+with "../../arch/ARM/STM32/stm32f303";
+with "../../components/components";
+with "../../middleware/middleware";
+with "../../middleware/ravenscar_support";
+
+library project Nucleo_F303RE_Full is
+
+   RTS_Profile := "ravenscar-full";
+
+   for Target use "arm-eabi";
+   for Runtime ("Ada") use RTS_Profile & "-nucleo_f303re";
+
+   Obj_Suffix := Project'Runtime ("Ada");
+
+   for Create_Missing_Dirs use "True";
+   for Library_Name use "nucleo_f303re";
+   for Library_Dir use "lib/" & Obj_Suffix;
+   for Object_Dir use "obj/" & Obj_Suffix;
+
+   for Source_Dirs use
+     ("../stm32_common/nucleo_f303re",
+      "../stm32_common/common");
+
+   package Builder is
+      for Switches ("Ada") use
+        ("--RTS=" & Project'Runtime("Ada"), "-s");
+   end Builder;
+
+   package Compiler renames Config.Compiler;
+
+end Nucleo_F303RE_Full;
