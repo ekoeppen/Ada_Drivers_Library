@@ -12,7 +12,7 @@ library project Nucleo_F303RE is
      external ("RTS_Profile", "ravenscar-sfp");
 
    for Target use "arm-eabi";
-   for Runtime ("Ada") use RTS_Profile & "-nucleo_f303re";
+   for Runtime ("Ada") use RTS_Profile & "-stm32nucleo_f303re";
 
    Obj_Suffix := Project'Runtime ("Ada");
 

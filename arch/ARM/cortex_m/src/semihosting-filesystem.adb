@@ -107,6 +107,17 @@ package body Semihosting.Filesystem is
       return Read_Only_File_System;
    end Remove_Directory;
 
+   overriding function Root_Node
+     (This   : in out SHFS;
+      As     : String;
+      Handle : out Any_Node_Handle)
+      return Status_Code
+   is
+      pragma Unreferenced (This, As, Handle);
+   begin
+      return Read_Only_File_System;
+   end Root_Node;
+
    ------------
    -- Rename --
    ------------

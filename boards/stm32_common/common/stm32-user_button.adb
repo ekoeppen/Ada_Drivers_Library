@@ -126,6 +126,8 @@ package body STM32.User_Button is
 
       User_Button_Point.Configure_IO
         ((Mode      => Mode_In,
+          Output_Type => Push_Pull,
+          Speed => Speed_2MHz,
           Resistors => (if Use_Rising_Edge then Pull_Down else Pull_Up)));
 
       --  Connect the button's pin to the External Interrupt Handler

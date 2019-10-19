@@ -47,7 +47,7 @@ with STM32.Device;  use STM32.Device;
 
 with STM32.GPIO;    use STM32.GPIO;
 
-with Ada.Interrupts.Names; use Ada.Interrupts;
+with Ada.Interrupts; use Ada.Interrupts;
 
 package STM32.Board is
    pragma Elaborate_Body;
@@ -74,7 +74,7 @@ package STM32.Board is
    --  User button
 
    User_Button_Point     : GPIO_Point renames PC13;
-   User_Button_Interrupt : constant Interrupt_ID := Names.EXTI15_10_Interrupt;
+   User_Button_Interrupt : constant Interrupt_ID := 0;
 
    procedure Configure_User_Button_GPIO;
    --  Configures the GPIO port/pin for the blue user button. Sufficient
